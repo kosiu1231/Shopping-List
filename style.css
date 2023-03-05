@@ -11,3 +11,6 @@ body {
 p {
     margin-top: 1rem;
 }
+.container {
+    max-height: 90vh;
+}
