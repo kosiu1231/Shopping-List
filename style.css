@@ -1,0 +1,13 @@
+body {
+    font-family: Caveat, monospace, sans-serif;
+    color: rgb(0, 0, 82);
+}
+
+.bg-image {
+    background: url("https://images.unsplash.com/photo-1542838132-92c53300491e?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1374&q=80");
+    background-size: cover;
+}
+
+p {
+    margin-top: 1rem;
+}
