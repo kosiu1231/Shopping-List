@@ -3,14 +3,22 @@ body {
     color: rgb(0, 0, 82);
 }
 
-.bg-image {
-    background: url("https://images.unsplash.com/photo-1542838132-92c53300491e?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1374&q=80");
-    background-size: cover;
-}
-
 p {
     margin-top: 1rem;
 }
 .container {
     max-height: 90vh;
+}
+
+.fa {
+    font-size: 24px;
+    float: right;
+    cursor: pointer;
+    margin: 10px;
+}
+
+.gg-math-plus {
+    float: right;
+    margin: 0px 15px 0px 10px;
+    cursor: pointer;
 }
