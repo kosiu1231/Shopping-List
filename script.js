@@ -15,6 +15,17 @@ function addParagraph(name) {
         elem.appendChild(node);
         elem.classList.add("text-3xl", "sm:text-4xl");
 
+        const isCrossedOut = localStorage.getItem(`crossedOut-${name}`) === "true";
+        if (isCrossedOut) {
+            elem.classList.add("pCrossed");
+        }
+
+        elem.addEventListener("click", function() {
+            this.classList.toggle("pCrossed");
+            const crossedOut = this.classList.contains("pCrossed");
+            localStorage.setItem(`crossedOut-${name}`, crossedOut.toString());
+        });
+
         addItemDiv.parentNode.insertBefore(elem, addItemDiv);
 
         const items = getItems();
@@ -32,6 +43,10 @@ const removeAllParagraphs = () => {
     const paragraphs = document.querySelectorAll("p.text-3xl");
 
     for (let i = 0; i < paragraphs.length - 1; i++) {
+        const paragraph = paragraphs[i];
+        const name = paragraph.textContent.substring(2);
+        localStorage.removeItem(`crossedOut-${name}`);
+
         paragraphs[i].remove();
       }
 };
@@ -76,6 +91,6 @@ deleteIcon.addEventListener("click", function (e) {
 const init = () => {
     const items = getItems();
     items.forEach((item) => addParagraph(item));
-  };
-  
-  init();
+};
+
+init();

@@ -6,6 +6,11 @@ body {
 p {
     margin-top: 1rem;
 }
+
+.pCrossed {
+    text-decoration: line-through;
+}
+
 .container {
     max-height: 90vh;
 }
